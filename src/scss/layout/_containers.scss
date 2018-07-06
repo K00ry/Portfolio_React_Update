@@ -1,0 +1,236 @@
+#home-wrap {
+  @include flex-display(flex, column, space-between, 100%, center);
+  position: fixed;
+  margin: auto;
+  top: 30%;
+  @-moz-document url-prefix() {
+    position: sticky;
+  }
+
+  h1 {
+    text-align: center;
+    @include font-fam-size(5em, $main-font-5, bold, #333333);
+    @include media(landscape) {
+      margin: 20px auto;
+    }
+  }
+  p {
+    @include font-fam-size(2em, $main-font-5, bold, #333333);
+    border-radius: 50%;
+  }
+}
+
+#projects {
+  @include flex-display(flex, column, space-between, 100%, center);
+  @include media(tablet) {
+    width: 100%;
+    padding-top: 20px;
+    margin: auto;
+  }
+  @include media(laptop) {
+    padding-top: 0;
+    width: 80%;
+  }
+  @include media(desktop) {
+    width: 80%;
+  }
+  @include media(landscape) {
+    margin: auto;
+  }
+  h1 {
+    opacity: 1;
+    @include font-fam-size(4.8em, $main-font-5, bold, #333333);
+    // top: -75px;
+    position: relative;
+    margin: 8px auto;
+    @include media(tablet) {
+      opacity: 1;
+      top: 0;
+    }
+    @include media(laptop) {
+      margin: 5px auto;
+    }
+  }
+  .works {
+    @include flex-display(flex, column, space-between, auto, center);
+    padding: 10px 0;
+    img {
+      height: 120px;
+      width: 120px;
+      border-radius: 20px;
+    }
+  }
+}
+
+#mobile-portfolio {
+  opacity: 0;
+  @include flex-display(flex, column, space-around, 100%, center);
+  @include media(landscape) {
+    @include flex-display(flex, row, space-around, 100%, center);
+  }
+  @include media(tablet) {
+    @include flex-display(flex, row, space-around, 100%, center);
+    margin: 10px auto;
+  }
+  .last {
+    margin-left: 200px;
+  }
+  .work-mobile {
+    display: flex;
+    align-items: center;
+    margin: 5px auto;
+
+    @include media(landscape) {
+      @include flex-display(flex, column, space-around, 20%, center);
+    }
+    @include media(tablet) {
+      opacity: 1;
+      flex-direction: column;
+      width: 20%;
+      margin: 0;
+    }
+    .img-border {
+      cursor: pointer;
+      margin: 10px 0;
+      box-shadow: 0 0 0 5px hsl(0, 0%, 70%), 0 0 0 10px hsl(0, 0%, 80%);
+      border-radius: 50%;
+      @include media(tablet) {
+        transition: all 0.7s;
+        margin: 8px 0;
+        box-shadow: 0 0 0 5px hsl(0, 0%, 70%), 0 0 0 10px hsl(0, 0%, 80%),
+          0 0 0 15px hsl(0, 0%, 90%);
+        &:hover {
+          box-shadow: 0 0 0 10px hsl(15, 76%, 70%), 0 0 0 20px hsl(30, 76%, 70%),
+            0 0 0 30px hsl(44, 76%, 70%);
+        }
+        @include media(laptop) {
+        }
+      }
+      img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        @include media(laptop) {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+    .caption {
+      @include font-fam-size(1.2em, $main-font-2, bolder, #383838);
+      margin: 10px 0;
+      padding: 0 20px;
+      cursor: pointer;
+      @include media(landscape) {
+        text-align: center;
+      }
+      @include media(tablet) {
+        text-align: center;
+        margin: 15px 0 0 0;
+      }
+    }
+  }
+}
+
+.about-main {
+  transition: all 0.5s;
+  @include flex-display(flex, column, space-between, 100%, center);
+  margin: auto;
+  margin-bottom: 15%;
+  @include media(tablet) {
+    padding: 1em;
+    margin-bottom: 80px;
+  }
+  @include media(laptop) {
+    // opacity: 0;
+    // top: 80px;
+    width: 70%;
+    background-color: #fff;
+    // height: 50vh;
+    margin-bottom: auto;
+  }
+  @include media(landscape) {
+    margin-bottom: 0;
+  }
+  .port-head-2 {
+    @include font-fam-size(5em, $main-font-5, bold, #333333);
+    margin: 0 auto;
+  }
+  p {
+    padding: 5px;
+    @include font-fam-size(1.1em, $main-font, 800, #383838);
+    // font-weight: 800;
+    // font-size: 0.8em;
+    text-align: center;
+    margin: 0.5em 0;
+    @include media(tablet) {
+      margin: 0;
+      font-weight: 600;
+      font-size: 1.1em;
+      width: 80%;
+    }
+    @include media(laptop) {
+      font-size: 1.4em;
+      font-weight: 600;
+    }
+  }
+  .skills-main {
+    @include flex-display(flex, column, space-around, 90%, center);
+    .skills-icons {
+      opacity: 0;
+      transition: all 0.5s;
+      @include flex-display(flex, row, space-around, 100%, center);
+      flex-wrap: wrap;
+      @include media(tablet) {
+        width: 70%;
+      }
+
+      @include media(laptop) {
+        width: auto;
+      }
+      .logo-skill {
+        max-width: 100%;
+        height: auto;
+        width: 30px;
+        margin: 6px;
+
+        @include media(tablet) {
+          width: 40px;
+          //height: 60px;
+          margin: 10px;
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  @include flex-display(flex, column, space-around, 100%, center);
+  // padding :10px;
+  @include media(laptop) {
+    opacity: 0;
+  }
+  h3 {
+    @include media(landscape) {
+      font-size: 1.5em;
+    }
+    @include font-fam-size(2.5em, $main-font-5, 200, #333333);
+    @include media(tablet) {
+      font-size: 3em;
+    }
+  }
+  .number-email {
+    @include flex-display(flex, row, space-around, 80%, center);
+    @include media(tablet) {
+      margin: 10px auto;
+      font-size: 1.8em;
+    }
+    a {
+      @include font-fam-size(1.2em, $main-font-5, 200, #5b5b5b);
+      text-decoration: none;
+      @include media(tablet) {
+        font-size: 1.4em;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "portfolio_react_update",
+  "version": "1.0.0",
+  "description": "Kourosh Mirzaei's portfolio ",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Kourosh Mirzaei",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "imports-loader": "^0.7.0",
+    "jquery": "^3.3.1"
+  },
+  "dependencies": {
+    "babel-preset-react": "^6.24.1",
+    "bootstrap": "^3.3.7",
+    "gsap": "^1.19.0",
+    "hoek": "^5.0.3",
+    "http-server": "^0.11.1",
+    "imports-loader": "^0.7.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.4.0",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.4.0",
+    "react-responsive": "^4.1.0",
+    "react-scripts": "^1.1.4",
+    "requirejs": "^2.3.2",
+    "scrollmagic": "^2.0.5",
+    "webpack": "^3.11.0"
+  }
+}

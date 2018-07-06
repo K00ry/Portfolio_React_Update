@@ -1,0 +1,62 @@
+.links {
+    margin-bottom:  40px ;
+    @include flex-display(flex, row, space-between, 40%, center);
+    @include media(landscape) {
+        margin: 0;
+        width: 30%;
+    }
+
+    a {
+        @include media(landscape) {
+            font-size: 1.6em;
+            box-shadow: none;
+        }
+        
+         @include media(tablet) {
+        width: 40%;
+       
+    }
+        @include media(laptop) {
+            font-size: 2em;
+            box-shadow: 0 0 0 5px hsl(0, 0%, 70%), 0 0 0 10px hsl(0, 0%, 80%);
+        }
+        text-align: center;
+        width: auto;
+        @include font-fam-size(2em, $main-font-5, bold, #FFFFFF);
+        background-color: #333333;
+        padding: 0 6px;
+        border-radius: 20%;
+        transition: all .7s;
+        margin: 8px 0;
+        box-shadow: 0 0 0 5px hsl(0, 0%, 70%), 0 0 0 10px hsl(0, 0%, 80%);
+
+        &:hover {
+            background-color: hsl(15, 76%, 70%);
+            box-shadow: 0 0 0 5px hsl(15, 76%, 70%), 0 0 0 10px hsl(30, 76%, 70%);
+            text-decoration: none;
+        }
+    }
+    @include media(tablet) {
+        width: 20%;
+        margin: 10px;
+    }
+    @include media(laptop) {
+        padding-bottom: 20px;
+    }
+     @include media(landscape) {
+         padding-bottom: 10px;
+        }
+}
+.modal-header{
+    width: 100%;
+    padding: 0 10px;
+    float: right;
+    border: none;
+    .close{
+        font-size: 34px;
+
+
+    }
+
+
+}

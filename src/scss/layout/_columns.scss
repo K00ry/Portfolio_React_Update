@@ -1,0 +1,43 @@
+#main-of-main{
+
+}
+
+
+#home {
+    @include flex-display(flex, column, space-between, 100%, center);
+    height: 100vh;
+    @include media(tablet) {
+        height: 100vh;
+        background: none;
+    }
+}
+
+#portfolio {
+   
+    @include flex-display(flex, column, space-between, 100%, center);
+     height: 100vh;
+    
+    @include media(tablet) {
+         height: auto;
+    }
+    @include media(landscape) {
+            height: 200;
+        }
+}
+
+#about {
+    @include flex-display(flex, column, space-between, 100%, center);
+    
+    @include media(tablet) {
+         height: 100vh;
+      
+    }
+     @include media(laptop) {
+        height: 100vh;
+    }
+   
+
+     @include media(landscape) {
+             height: auto;
+        }
+}
