@@ -7,7 +7,6 @@ export const data = [
     tech: [
       'src/img/work/logos/html.png',
       'src/img/work/logos/css.png',
-
       'src/img/work/logos/js.png',
         'src/img/work/logos/sass.svg',
 
