@@ -91,7 +91,7 @@ export const skills = [
   'src/img/work/logos/php.png',
 
   'src/img/work/logos/gulp1.png',
-  'src/img/work/logos/bigCommerce.png',
+  'src/img/work/logos/bigcommerce.png',
   'src/img/work/logos/green.png',
     'src/img/work/logos/git.svg',
   'src/img/work/logos/ai.png',
