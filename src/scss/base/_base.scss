@@ -1,267 +1,234 @@
-//bootsrtap corrections 
+//bootsrtap corrections
+
 .panel {
-    background-color: transparent;
-    box-shadow: none;
-    margin-bottom: 0;
+  background-color: transparent;
+  box-shadow: none;
+  margin-bottom: 0;
 }
 
- .nav>li>a:hover {
-   
-   background-color: inherit;
+.nav > li > a:hover {
+  background-color: inherit;
 }
- .nav>li>a:focus {
-   
-   background-color: inherit;
+.nav > li > a:focus {
+  background-color: inherit;
 }
-
 
 ////////////////////////////BASE\\\\\\\\\\\\\\\\\\\\\\\\\\\
 body {
-    position: relative;
+  position: relative;
 }
 
 .nav {
-    @include flex-display(flex, row, space-around, 100%, center);
-    @include media(tablet) {
-        padding-top: 10px;
-    }
-    @include media(laptop) {
-        justify-content: flex-start;
-    }
+  @include flex-display(flex, row, space-around, 100%, center);
+  @include media(tablet) {
+    padding-top: 10px;
+  }
+  @include media(laptop) {
+    justify-content: flex-start;
+  }
 }
 
 .navbar-nav {
-    margin: 0;
+  margin: 0;
 }
 
 .nav-item a {
-    outline: none;
-    transition: all .5s;
-    @include font-fam-size(2em, $main-font-5, bold, #333333);
-    @include media(tablet) {
-        font-size: 3em;
-    }
-    @include media(desktop) {
-        font-size: 4em;
-        margin: 20px;
-    }
-    // &:hover {
-    //     color: rgba(0, 0, 0, .3);
-    // }
+  outline: none;
+  transition: all 0.5s;
+  @include font-fam-size(2em, $main-font-5, bold, #333333);
+  @include media(tablet) {
+    font-size: 3em;
+  }
+  @include media(desktop) {
+    font-size: 4em;
+    margin: 20px;
+  }
 }
 
-// .nav-item a:focus {
-//     border-radius: 50%;
-//     background-color: hsl(15, 76%, 60%);
-//     box-shadow: 0 0 0 5px hsl(15, 76%, 70%), 0 0 0 10px hsl(30, 76%, 70%), 0 0 0 15px hsl(44, 76%, 70%);
-//     // color: #333333;
-// }
 .active-me a {
-    // border-radius: 50%;
-    // background-color: hsl(15, 76%, 60%);
-    // box-shadow: 0 0 0 5px hsl(15, 76%, 70%), 0 0 0 10px hsl(30, 76%, 70%), 0 0 0 15px hsl(44, 76%, 70%);
-    color: #e7724b;
+  color: #e7724b;
 }
 
-//  .active-me a:hover{
-//     }
 .active-intro {
-    background-color: hsl(15, 76%, 60%);
-    box-shadow: 0 0 0 15px hsl(15, 76%, 70%), 0 0 0 30px hsl(30, 76%, 70%), 0 0 0 45px hsl(44, 76%, 70%);
-    transition: all .5s;
-}
-
-.navbar-light .navbar-nav .nav-link {
-    // color: inherit;
-    // padding: 0;
-    // &:hover,&:focus{{background-color: transparent;}
-    // &:visited{background-color: initial;}
+  background-color: hsl(15, 76%, 60%);
+  box-shadow: 0 0 0 15px hsl(15, 76%, 70%), 0 0 0 30px hsl(30, 76%, 70%),
+    0 0 0 45px hsl(44, 76%, 70%);
+  transition: all 0.5s;
 }
 
 .overlay-contentscale.open {
-    visibility: visible;
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
+  visibility: visible;
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
 }
 
 .overlay-contentscale {
-    visibility: hidden;
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-    -webkit-transition: -webkit-transform 0.5s, visibility 0s 0.5s;
-    transition: transform 0.5s, visibility 0s 0.5s;
+  visibility: hidden;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.5s, visibility 0s 0.5s;
+  transition: transform 0.5s, visibility 0s 0.5s;
 }
 
 .modal-content {
+  @include flex-display(flex, column, flex-start, 100%, center);
+
+  background: $hard-blue-l;
+
+  @include media(tablet) {
+    display: none;
+  }
+  h1 {
+    width: 100%;
+    background-color: #000000;
+    @include font-fam-size(4em, $main-font-5, bold, #ebebeb);
+    padding: 10px 0;
+    margin: 0;
+    text-align: center;
+    @include media(landscape) {
+      font-size: 2em;
+    }
+  }
+  .lay-img {
     @include flex-display(flex, column, flex-start, 100%, center);
-    //position: fixed;
-    //height: 100%;
-    //top: 0;
-    //left: 0;
-    background: $hard-blue-l;
-    //z-index: 1400;
-    @include media(tablet) {
-        display: none;
+    height: auto;
+    padding: 10px 0;
+    margin: auto;
+    @include media(landscape) {
+      padding: 0;
     }
-    h1 {
-        width: 100%;
-        background-color: #000000;
-        @include font-fam-size(4em, $main-font-5, bold, #EBEBEB);
-        padding: 10px 0;
-        margin: 0;
-        text-align: center;
-        @include media(landscape) {
-            font-size: 2em;
+    ul {
+      @include flex-display(flex, row, space-around, 80%, center);
+      flex-wrap: wrap;
+      @include font-fam-size(0.7em, $main-font-3, bold, #ebebeb);
+      padding: 20px 0 20px 0;
+      @include media(landscape) {
+      }
+      .tech-title {
+        width: 10%;
+        img {
+          max-width: 100%;
+          height: auto;
         }
+      }
     }
-    .lay-img {
-        @include flex-display(flex, column, flex-start, 100%, center);
-        height: auto;
-        padding: 10px 0;
-        margin: auto;
-        @include media(landscape) {
-            padding: 0;
-        }
-        ul {
-            @include flex-display(flex, row, space-around, 80%, center);
-            flex-wrap: wrap;
-            @include font-fam-size(.7em, $main-font-3, bold, #EBEBEB);
-            padding: 20px 0 20px 0;
-            @include media(landscape) {}
-            .tech-title {
-                width: 10%;
-                img {
-                    max-width:100%;
-                    height: auto;
-                    // @include media(landscape) {
-                    //     width: 20px;
-                    //     height: 25px;
-                    // }
-                }
-            }
-        }
-    }
+  }
 }
 
 .img-and-caption {
-    @include flex-display(flex, column, space-around, 100%, center);
+  @include flex-display(flex, column, space-around, 100%, center);
+  @include media(landscape) {
+    padding: 10px 0 10px 0;
+  }
+  img {
+    background-color: #cccccc;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 0 10px 0;
     @include media(landscape) {
-        padding: 10px 0 10px 0;
+      width: 55%;
+      padding: 10px 0 10px 0;
     }
-    img {
-        background-color: #CCCCCC;
-        width: 100%;
-        max-width: 400px;
-        padding: 10px 0 10px 0;
-        @include media(landscape) {
-            width: 55%;
-            padding: 10px 0 10px 0;
-        }
-    }
-    p {
-        @include font-fam-size(1em, $main-font-2, bold, #000);
-        width: 80%;
-        text-align: center;
-        //font-size: 0.7em;
-        padding: 10px 0 10px 0;
-        //@include media(landscape) {
-        //    font-size: 0.7em;
-        //    margin: 0;
-        //}
-    }
+  }
+  p {
+    @include font-fam-size(1em, $main-font-2, bold, #000);
+    width: 80%;
+    text-align: center;
+    //font-size: 0.7em;
+    padding: 10px 0 10px 0;
+  }
 }
 
 #overlay-desktop {
-    display: none;
-    @include media(tablet) {
-        opacity: 0;
-        @include flex-display(flex, column, flex-start, 90%, center);
-        .img-holder {
-            @include flex-display(flex, column, flex-start, 100%, center);
-            margin: 10px auto;
-            img {
-                width: 100%;
-                @include media(laptop) {
-                    width: 90%;
-                }
-                @include media(desktop) {
-                    width: 100%;
-                }
-            }
+  display: none;
+  @include media(tablet) {
+    opacity: 0;
+    @include flex-display(flex, column, flex-start, 90%, center);
+    .img-holder {
+      @include flex-display(flex, column, flex-start, 100%, center);
+      margin: 10px auto;
+      img {
+        width: 100%;
+        @include media(tablet) {
+          width: 100%;
         }
-        img {
-            width: 90%;
-            @include media(laptop) {
-                max-width: 90%;
-            }
-            @include media(desktop) {
-                max-width: 100%;
-            }
-        }
-    }
-    p {
-        @include font-fam-size(1.2em, $main-font, 400, #383838);
-        margin: 10px 0;
-        text-align: center;
-        // font-weight: 400;
+
         @include media(laptop) {
-            width: 80%;
+          width: 94%;
         }
+      }
     }
-    .title-tech-ov {
-        @include flex-display(flex, row, space-between, 100%);
-        .title-ov {
-            @include font-fam-size(2em, $main-font-5, bold, #333333);
-            @include media(tablet) {
-                @include font-fam-size(2em, $main-font-5, bold, #333333);
-            }
-            @include media(laptop) {
-                @include font-fam-size(3em, $main-font-5, bold, #333333);
-            }
-        }
-         .tech-ov{
-            @include flex-display(flex, row, flex-end, 80%, center);
-        }
-        .tech-title{
-            width:7%;
-            margin: 0 6px;
-            img {
-                max-width: 100%;
-                height: auto;
-
-                @include media(laptop) {}
-            }
-
-
-        }
-
+    img {
+      width: 90%;
+      @include media(laptop) {
+        max-width: 90%;
+      }
+      @include media(desktop) {
+        max-width: 100%;
+      }
     }
-    @include media(desktop) {
-        width: 70%;
+  }
+  p {
+    @include font-fam-size(1.2em, $main-font, 400, #383838);
+    margin: 10px 0;
+    text-align: center;
+    // font-weight: 400;
+    @include media(laptop) {
+      width: 80%;
     }
+  }
+  .title-tech-ov {
+    @include flex-display(flex, row, space-between, 100%);
+    .title-ov {
+      @include font-fam-size(2em, $main-font-5, bold, #333333);
+      @include media(tablet) {
+        @include font-fam-size(2em, $main-font-5, bold, #333333);
+      }
+      @include media(laptop) {
+        @include font-fam-size(3em, $main-font-5, bold, #333333);
+      }
+    }
+    .tech-ov {
+      @include flex-display(flex, row, flex-end, 80%, center);
+    }
+    .tech-title {
+      width: 7%;
+      margin: 0 6px;
+      img {
+        max-width: 100%;
+        height: auto;
+
+        @include media(laptop) {
+        }
+      }
+    }
+  }
+  @include media(desktop) {
+    width: 70%;
+  }
 }
 
 ///* BACKGROUND VIDEO STYLES *\\\\
 
-.backGroundVid{
-    opacity: 0.1;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: -100;
+.backGroundVid {
+  opacity: 0.1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
 }
 
 .backGroundVid__video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 @media (min-aspect-ratio: 16/9) {
   .backGroundVid__video {
@@ -286,4 +253,3 @@ body {
     display: none;
   }
 }
-

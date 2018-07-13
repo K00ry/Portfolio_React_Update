@@ -8,9 +8,9 @@ export const data = [
       'src/img/work/logos/html.png',
       'src/img/work/logos/css.png',
       'src/img/work/logos/js.png',
-        'src/img/work/logos/sass.svg',
+      'src/img/work/logos/sass.svg',
 
-        'src/img/work/logos/react.png',
+      'src/img/work/logos/react.png',
       'src/img/work/logos/git.svg',
     ],
     demo: 'https://k00ry.github.io/react-web-api/',
@@ -20,18 +20,18 @@ export const data = [
     name: 'WEB_APP',
     img: 'src/img/work/responsive/2.png',
     info:
-'This project was about building a beautiful web application dashboard complete with JavaScript-driven charts and graphs base on a suplied graphic mockup. This was a front end project onlythat required to create the responsive layout in HTML and CSS with added JavaScript functionality. Flexbox and Sass proved to be invaluable tools.',
+      'This project was about building a beautiful web application dashboard complete with JavaScript-driven charts and graphs base on a suplied graphic mockup. This was a front end project onlythat required to create the responsive layout in HTML and CSS with added JavaScript functionality. Flexbox and Sass proved to be invaluable tools.',
     tech: [
-    'src/img/work/logos/html.png',
-    'src/img/work/logos/css.png',
-        'src/img/work/logos/js.png',
-    'src/img/work/logos/sass.svg',
-    'src/img/work/logos/jquery.png',
-    'src/img/work/logos/git.svg',
-],
+      'src/img/work/logos/html.png',
+      'src/img/work/logos/css.png',
+      'src/img/work/logos/js.png',
+      'src/img/work/logos/sass.svg',
+      'src/img/work/logos/jquery.png',
+      'src/img/work/logos/git.svg',
+    ],
     demo: 'https://k00ry.github.io/web_app_dashboard_v2/',
     github: 'https://github.com/K00ry/web_app_dashboard_v2',
-},
+  },
   {
     name: 'Responsive Layout',
     img: 'src/img/work/responsive/3.png',
@@ -42,7 +42,7 @@ export const data = [
       'src/img/work/logos/css.png',
 
       'src/img/work/logos/js.png',
-        'src/img/work/logos/sass.svg',
+      'src/img/work/logos/sass.svg',
       'src/img/work/logos/git.svg',
     ],
     demo: 'https://k00ry.github.io/css_sass/',
@@ -79,21 +79,23 @@ export const data = [
 ];
 
 export const skills = [
-    'src/img/work/logos/html.png',
-    'src/img/work/logos/css.png',
-    'src/img/work/logos/js.png',
-    'src/img/work/logos/jquery.png',
-    "src/img/work/logos/react.png",
-    "src/img/work/logos/php.png",
-    "src/img/work/logos/sass.svg",
-    "src/img/work/logos/bootstrap.png",
-    "src/img/work/logos/gulp1.png",
-    "src/img/work/logos/green.png",
-    "src/img/work/logos/ai.png",
+  'src/img/work/logos/html.png',
+  'src/img/work/logos/css.png',
+  'src/img/work/logos/js.png',
+  'src/img/work/logos/jquery.png',
+  'src/img/work/logos/react.png',
+    'src/img/work/logos/webpack.png',
+    'src/img/work/logos/sass.svg',
+    'src/img/work/logos/bootstrap.png',
+  'src/img/work/logos/php.png',
+
+  'src/img/work/logos/gulp1.png',
+  'src/img/work/logos/big.png',
+  'src/img/work/logos/green.png',
     'src/img/work/logos/git.svg',
+  'src/img/work/logos/ai.png',
+
 ];
-
-
 
 export const worksData = [
   { id: 1, name: 'React Web API', src: 'src/img/work/tablet/1.png' },
