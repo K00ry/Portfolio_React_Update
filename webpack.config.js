@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const isProd = process.env.NODE_ENV === 'production';
 module.exports = {
@@ -24,6 +25,15 @@ module.exports = {
   module: {
 
     rules: [
+        {
+            test: /\.(png|jpg|gif)$/,
+            use: [
+                {
+                    loader: 'file-loader',
+                    options: {}
+                }
+            ]
+        },
       { test: /\.js/, use: 'imports-loader?define=>false' },
       {
         test: /\.js$/,
@@ -52,5 +62,6 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
     }),
+      // new BundleAnalyzerPlugin()
   ],
 };

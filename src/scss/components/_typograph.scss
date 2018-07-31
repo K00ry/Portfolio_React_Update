@@ -1,6 +1,9 @@
 .navbar {
     background: transparent;
-    width: 100%;
+width: 100%;
+    @include media(laptop) {
+        width: 10%;
+    }
     h1 {
         display: inline-block;
         @include font-fam-size( 2.2em, asli, bold, $text-black-m);

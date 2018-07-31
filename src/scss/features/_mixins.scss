@@ -47,6 +47,7 @@
                 @content;
             }
         }
+
         @else if $break==tablet {
             @media (min-width: $brk-tablet) {
                 @content;

@@ -6,12 +6,14 @@
   @-moz-document url-prefix() {
     position: sticky;
   }
+  @include media(landscape) {
+    margin: auto;
+  }
 
   h1 {
     text-align: center;
     @include font-fam-size(5em, $main-font-5, bold, #333333);
     @include media(landscape) {
-      margin: 20px auto;
     }
   }
   p {
@@ -37,12 +39,16 @@
   @include media(landscape) {
     margin: auto;
   }
+
   h1 {
     opacity: 1;
     @include font-fam-size(4.8em, $main-font-5, bold, #333333);
-    // top: -75px;
+
     position: relative;
     margin: 8px auto;
+    @include media(landscape) {
+      display: none;
+    }
     @include media(tablet) {
       opacity: 1;
       top: 0;
@@ -66,6 +72,7 @@
   opacity: 0;
   @include flex-display(flex, column, space-around, 100%, center);
   @include media(landscape) {
+    height: 100vh;
     @include flex-display(flex, row, space-around, 100%, center);
   }
   @include media(tablet) {
@@ -76,9 +83,9 @@
     margin-left: 200px;
   }
   .work-mobile {
-    display: flex;
-    align-items: center;
-    margin: 5px auto;
+    @include flex-display(flex, row-reverse, center, 100%, center);
+
+    margin: 15px auto;
 
     @include media(landscape) {
       @include flex-display(flex, column, space-around, 20%, center);
@@ -90,41 +97,57 @@
       margin: 0;
     }
     .img-border {
-      cursor: pointer;
-      margin: 10px 0;
-      box-shadow: 0 0 0 5px hsl(0, 0%, 70%), 0 0 0 10px hsl(0, 0%, 80%);
-      border-radius: 50%;
+      width: 50%;
+
       @include media(tablet) {
+        width: auto;
+        border-radius: 50%;
+        cursor: pointer;
         transition: all 0.7s;
         margin: 8px 0;
         box-shadow: 0 0 0 5px hsl(0, 0%, 70%), 0 0 0 10px hsl(0, 0%, 80%),
           0 0 0 15px hsl(0, 0%, 90%);
+
         &:hover {
-          box-shadow: 0 0 0 10px hsl(15, 76%, 70%), 0 0 0 20px hsl(30, 76%, 70%),
-            0 0 0 30px hsl(44, 76%, 70%);
+          box-shadow: 0 0 0 10px hsl(15, 76%, 70%), 0 0 0 20px hsl(30, 76%, 70%);
         }
         @include media(laptop) {
         }
       }
       img {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
+        max-width: 100%;
+        height: auto;
+        @include media(tablet) {
+          border-radius: 50%;
+          width: 86px;
+          height: 80px;
+        }
+
         @include media(laptop) {
           max-width: 100%;
-
         }
+      }
+    }
+    .active {
+      @include media(tablet) {
+        box-shadow: 0 0 0 10px hsl(15, 76%, 70%), 0 0 0 20px hsl(30, 76%, 70%),
+          0 0 0 30px hsl(44, 76%, 70%);
       }
     }
     .caption {
       @include font-fam-size(1.2em, $main-font-2, bolder, #383838);
+      width: 28%;
       margin: 10px 0;
-      padding: 0 20px;
+      //padding-right: 30px;
       cursor: pointer;
       @include media(landscape) {
         text-align: center;
+        padding: 0;
+        width: 50%;
       }
       @include media(tablet) {
+        padding: 5px;
+        width: 100%;
         text-align: center;
         margin: 15px 0 0 0;
       }
@@ -136,17 +159,15 @@
   transition: all 0.5s;
   @include flex-display(flex, column, space-between, 100%, center);
   margin: auto;
-  margin-bottom: 15%;
+  //margin-bottom: 15%;
   @include media(tablet) {
     padding: 1em;
-    margin-bottom: 80px;
+    width: 80%;
   }
   @include media(laptop) {
-    // opacity: 0;
-    // top: 80px;
     width: 70%;
     background-color: #fff;
-    // height: 50vh;
+
     margin-bottom: auto;
   }
   @include media(landscape) {
@@ -156,24 +177,28 @@
     @include font-fam-size(5em, $main-font-5, bold, #333333);
     margin: 0 auto;
   }
-  p {
-    padding: 5px;
-    @include font-fam-size(1.1em, $main-font, 800, #383838);
-    // font-weight: 800;
-    // font-size: 0.8em;
-    text-align: center;
-    margin: 0.5em 0;
-    @include media(tablet) {
-      margin: 0;
-      font-weight: 600;
-      font-size: 1.1em;
-      width: 80%;
-    }
-    @include media(laptop) {
-      font-size: 1.4em;
-      font-weight: 600;
+
+  .about-me-info {
+    p {
+      padding: 5px 10px;
+      @include font-fam-size(1.1em, $main-font-2, 400, #383838);
+      // font-weight: 800;
+      // font-size: 0.8em;
+      text-align: center;
+      margin: 0.5em 0;
+      @include media(tablet) {
+        margin: auto;
+        font-weight: 600;
+        font-size: 1.1em;
+        width: 80%;
+      }
+      @include media(laptop) {
+        font-size: 1.4em;
+        font-weight: 600;
+      }
     }
   }
+
   .skills-main {
     @include flex-display(flex, column, space-around, 90%, center);
     .skills-icons {
@@ -227,7 +252,7 @@
     }
     a {
       @include font-fam-size(1.2em, $main-font-5, 200, #5b5b5b);
-      text-decoration: none;
+      text-decoration: underline;
       @include media(tablet) {
         font-size: 1.4em;
       }

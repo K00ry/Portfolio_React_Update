@@ -16,6 +16,13 @@
 ////////////////////////////BASE\\\\\\\\\\\\\\\\\\\\\\\\\\\
 body {
   position: relative;
+  background-image: url('../img/work/background/back.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include media(laptop) {
+    background-image: none;
+  }
 }
 
 .nav {
@@ -103,7 +110,7 @@ body {
       @include flex-display(flex, row, space-around, 80%, center);
       flex-wrap: wrap;
       @include font-fam-size(0.7em, $main-font-3, bold, #ebebeb);
-      padding: 20px 0 20px 0;
+      padding: 5px;
       @include media(landscape) {
       }
       .tech-title {
@@ -170,31 +177,36 @@ body {
       }
     }
   }
-  p {
-    @include font-fam-size(1.2em, $main-font, 400, #383838);
+  .info-ov {
+    @include font-fam-size(1.2em, $main-font-2, 200, #383838);
     margin: 10px 0;
     text-align: center;
-    // font-weight: 400;
+
     @include media(laptop) {
       width: 80%;
     }
   }
   .title-tech-ov {
-    @include flex-display(flex, row, space-between, 100%);
+    @include flex-display(flex, row, space-evenly, 100%);
     .title-ov {
       @include font-fam-size(2em, $main-font-5, bold, #333333);
       @include media(tablet) {
-        @include font-fam-size(2em, $main-font-5, bold, #333333);
+        @include font-fam-size(2.5em, $main-font-5, bold, #333333);
+        text-align: left;
+        margin: 0px;
+        line-height: 2;
       }
       @include media(laptop) {
         @include font-fam-size(3em, $main-font-5, bold, #333333);
       }
     }
     .tech-ov {
-      @include flex-display(flex, row, flex-end, 80%, center);
+      @include flex-display(flex, row, space-evenly, 50%, center);
+      @include media(laptop) {
+      }
     }
     .tech-title {
-      width: 7%;
+      width: 10%;
       margin: 0 6px;
       img {
         max-width: 100%;

@@ -1,43 +1,29 @@
-#main-of-main{
-
-}
-
-
 #home {
-    @include flex-display(flex, column, space-between, 100%, center);
+  @include flex-display(flex, column, space-between, 100%, center);
+  height: 100vh;
+  @include media(tablet) {
     height: 100vh;
-    @include media(tablet) {
-        height: 100vh;
-        background: none;
-    }
+    background: none;
+  }
 }
 
 #portfolio {
-   
-    @include flex-display(flex, column, space-between, 100%, center);
-     height: 100vh;
-    
-    @include media(tablet) {
-         height: auto;
-    }
-    @include media(landscape) {
-            height: 200;
-        }
+  @include flex-display(flex, column, space-between, 100%, center);
+  height: 100vh;
+
+  @include media(tablet) {
+    height: auto;
+  }
+  @include media(landscape) {
+    height: 300px;
+  }
 }
 
 #about {
-    @include flex-display(flex, column, space-between, 100%, center);
-    
-    @include media(tablet) {
-         height: 100vh;
-      
-    }
-     @include media(laptop) {
-        height: 100vh;
-    }
-   
+  @include flex-display(flex, column, space-between, 100%, center);
+  height: 100vh;
 
-     @include media(landscape) {
-             height: auto;
-        }
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+    height: auto;
+  }
 }

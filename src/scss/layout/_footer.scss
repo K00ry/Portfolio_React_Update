@@ -35,6 +35,10 @@ footer {
         height: 30px;
         //fill:#fff;
         &:hover {
+            svg{
+                color: #e7724b;
+            }
+
             opacity: 0.7;
         }
         @include media(landscape) {

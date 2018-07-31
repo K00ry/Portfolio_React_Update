@@ -14,28 +14,23 @@ const WorksDesktop = props => {
       </div>
       <div className="title-tech-ov">
         <h1 className="title-ov">{props.works.name}</h1>
-        <Skills works={props.works}/>
+        <ul className="links">
+          <li className="git-ov">
+            <a href={props.works.github}>GITHUB</a>
+          </li>
+          <li className="demo-ov">
+            <a href={props.works.demo}>DEMO</a>
+          </li>
+        </ul>
+        <Skills works={props.works} />
       </div>
-      <p className="info-ov">
-          {props.works.info}
-      </p>
-      <div className="links">
-        <a className="git-ov" href={props.works.github} >Github</a>
-        <a
-          className="demo-ov"
-          href={props.works.demo}
-        >
-          DEMO
-        </a>
-      </div>
+      <p className="info-ov">{props.works.info}</p>
     </div>
   );
 };
 
 Skills.propTypes = {
-    works: PropTypes.object.isRequired
+  works: PropTypes.object.isRequired,
 };
-
-
 
 export default WorksDesktop;
