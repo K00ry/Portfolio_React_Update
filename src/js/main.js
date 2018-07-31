@@ -7,12 +7,9 @@ import { skills } from '../data';
 export default function main() {
   //////////////// Browser Reload after resize\\\\\\\\
 
-  $(window).bind('resize', function(e) {
-    if (window.RT) clearTimeout(window.RT);
-    window.RT = setTimeout(function() {
-      this.location.reload(false); /* false to get page from cache */
-    }, 200);
-  });
+    $(window).bind('orientationchange', function (event) {
+        location.reload(true);
+    });
   /////////////////////// Scroll to click handlers \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
   const target_home = $('#home').offset().top,
@@ -37,10 +34,10 @@ export default function main() {
     skillContainer.html(skill_icon);
   });
 
-  /////////////////////// intro animation \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
-  TweenMax.staggerFrom('.main-meme', 2, { scale: 0.8, opacity: 0, delay: 1.5 });
-  TweenMax.staggerFrom('.navbar', 2, { scale: 0.5, opacity: 0, delay: 1.5 });
+  // /////////////////////// intro animation \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  //
+  // TweenMax.staggerFrom('.main-meme', 2, { scale: 0.8, opacity: 0, delay: 1.5 });
+  // TweenMax.staggerFrom('.navbar', 2, { scale: 0.5, opacity: 0, delay: 1.5 });
 
   /////////////////////// scroll magics scroll spy feature \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
