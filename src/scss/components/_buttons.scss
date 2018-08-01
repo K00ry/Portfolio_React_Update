@@ -9,9 +9,10 @@
     width: 20%;
   }
   @include media(landscape) {
-    padding-bottom: 10px;
+    justify-content: space-evenly;
+    padding-bottom: 0.4em;
     width: 50%;
-    margin: 10px;
+    margin: 0.4em;
   }
 
   li {
@@ -24,17 +25,11 @@
     transition: all 0.7s;
     margin: 8px 8px;
 
-    a {
-      text-decoration: none;
-      color: #fff;
-      display: block;
-      padding: 10px;
-    }
     @include media(landscape) {
-      font-size: 1.6em;
+      //font-size: 1.6em;
       box-shadow: none;
       margin: 0;
-      width: 30%;
+      width: 25%;
     }
 
     @include media(tablet) {
@@ -50,6 +45,16 @@
       background-color: hsl(15, 76%, 70%);
       box-shadow: 0 0 0 3px hsl(15, 76%, 70%), 0 0 0 5px hsl(30, 76%, 70%);
       text-decoration: none;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      padding: 10px;
+      @include media(landscape) {
+        padding: 5px;
+        font-size: 0.6em;
+      }
     }
   }
 }

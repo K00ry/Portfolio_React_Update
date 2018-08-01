@@ -49,7 +49,7 @@ export default class App extends Component {
     return (
       <div id="projects">
         <h1 className="port-head">Work</h1>
-        <MediaQuery query="(max-device-width: 543px)">
+        <MediaQuery query="(max-device-width: 767px)">
           <Works data={worksDataMobile} handleClick={this.getArray} />
 
           <WorksMobile
@@ -59,7 +59,7 @@ export default class App extends Component {
           />
         </MediaQuery>
 
-        <MediaQuery query="(min-device-width: 544px)">
+        <MediaQuery query="(min-device-width: 768px)">
           <Works data={worksData} handleClick={this.getArray} />
           <WorksDesktop works={this.state.works} />
         </MediaQuery>

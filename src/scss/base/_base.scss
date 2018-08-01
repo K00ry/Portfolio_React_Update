@@ -83,6 +83,11 @@ body {
   @include flex-display(flex, column, flex-start, 100%, center);
 
   background: $hard-blue-l;
+  @include media(landscape) {
+    z-index: 1060;
+    overflow: hidden;
+    height: 100vh;
+  }
 
   @include media(tablet) {
     display: none;
@@ -95,7 +100,8 @@ body {
     margin: 0;
     text-align: center;
     @include media(landscape) {
-      font-size: 2em;
+      font-size: 1.8em;
+      padding: 0.3em 0;
     }
   }
   .lay-img {
@@ -112,6 +118,8 @@ body {
       @include font-fam-size(0.7em, $main-font-3, bold, #ebebeb);
       padding: 5px;
       @include media(landscape) {
+        width: 40%;
+        padding: 0.2em;
       }
       .tech-title {
         width: 10%;
@@ -127,7 +135,7 @@ body {
 .img-and-caption {
   @include flex-display(flex, column, space-around, 100%, center);
   @include media(landscape) {
-    padding: 10px 0 10px 0;
+    padding: 5px 5px;
   }
   img {
     background-color: #cccccc;
@@ -135,8 +143,8 @@ body {
     max-width: 400px;
     padding: 10px 0 10px 0;
     @include media(landscape) {
-      width: 55%;
-      padding: 10px 0 10px 0;
+      width: 44%;
+      padding: 0.4em 0.4em;
     }
   }
   p {
@@ -145,6 +153,12 @@ body {
     text-align: center;
     //font-size: 0.7em;
     padding: 10px 0 10px 0;
+    @include media(landscape) {
+      padding: 0.4em;
+      margin: 0;
+
+      font-size: 0.7em;
+    }
   }
 }
 

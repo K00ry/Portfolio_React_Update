@@ -14,7 +14,11 @@ export default class Works extends Component {
         jaber += 'active';
       }
       return (
-        <li key={index} className="work-mobile work-desktop">
+        <li
+          key={index}
+          onClick={() => this.props.handleClick(index)}
+          className="work-mobile work-desktop"
+        >
           <a
             className={`img-border ${jaber}`}
             onClick={() => this.props.handleClick(index)}
