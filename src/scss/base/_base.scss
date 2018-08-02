@@ -204,7 +204,8 @@ body {
     }
   }
   .title-tech-ov {
-    @include flex-display(flex, row, space-evenly, 100%);
+    @include flex-display(flex, row, space-around, 100%);
+
     .title-ov {
       @include font-fam-size(2em, $main-font-5, bold, #333333);
       @include media(tablet) {

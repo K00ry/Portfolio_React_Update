@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import { TweenMax, TimelineMax } from 'gsap';
 import ScrollMagic from 'scrollmagic';
+import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators'
 
 ///////////////////--------------- javascript code for desktop ----------- \\\\\\\\\\\\\\\\\\\\\
 
@@ -61,19 +62,19 @@ export default function desktop() {
 
     var controller = new ScrollMagic.Controller();
     const tweenySkills = new TimelineMax()
-      .fromTo(
-        $('.port-head-2'),
-        4,
-        { css: { fontSize: '5.5em' } },
-        { css: { fontSize: '3em' } },
-        0,
-      )
+      // .fromTo(
+      //   $('.port-head-2'),
+      //   4,
+      //   { css: { fontSize: '5em' } },
+      //   { css: { fontSize: '3em' } },
+      //   0,
+      // )
       .to($('.skills-icons,.contact'), 4, { opacity: 1, duration: 3 });
 
     const smallerScene2 = new ScrollMagic.Scene({
       triggerElement: '.about-main',
-      triggerHook: 0.6,
-      duration: '100',
+      triggerHook: 0.7,
+      duration: '150',
       offset: 100,
     })
       .setTween(tweenySkills)
@@ -183,13 +184,13 @@ export default function desktop() {
 
     var controller = new ScrollMagic.Controller();
     const tweenySkills = new TimelineMax()
-      .fromTo(
-        $('.port-head-2'),
-        4,
-        { css: { fontSize: '5.5em' } },
-        { css: { fontSize: '3.5em' } },
-        0,
-      )
+      // .fromTo(
+      //   $('.port-head-2'),
+      //   4,
+      //   { css: { fontSize: '5.5em' } },
+      //   { css: { fontSize: '3.5em' } },
+      //   0,
+      // )
       .to($('.skills-icons'), 4, { opacity: 1, duration: 3 }, 0);
 
     const smallerScene2 = new ScrollMagic.Scene({

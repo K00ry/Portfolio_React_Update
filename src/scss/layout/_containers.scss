@@ -189,10 +189,20 @@
   @include media(landscape) {
     margin-bottom: 0;
   }
-  .port-head-2 {
-    @include font-fam-size(5em, $main-font-5, bold, #333333);
-    margin: 0 auto;
+  .port-head-2-container{
+    @include media(tablet) {
+      margin: 10px;
+    }
+
+
+
+    .port-head-2 {
+      @include font-fam-size(3em, $main-font-5, bold, #333333);
+      margin: 0 auto;
+    }
+
   }
+
 
   .about-me-info {
     p {
@@ -219,7 +229,8 @@
     .skills-icons {
       opacity: 0;
       transition: all 0.5s;
-      @include flex-display(flex, row, space-evenly, 80%, center);
+      @include flex-display(flex, row, space-around, 80%, center);
+
       flex-wrap: wrap;
       @include media(tablet) {
         width: 70%;
