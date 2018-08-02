@@ -1,17 +1,16 @@
 .navbar {
-    background: transparent;
-width: 100%;
-    @include media(laptop) {
-        width: 10%;
-    }
-    h1 {
-        display: inline-block;
-        @include font-fam-size( 2.2em, asli, bold, $text-black-m);
-        margin: auto 40px;
-        
-    }
-    .navbar-toggler {
-        font-size: 1.9em;
-        outline: none;
-    }
+  background: transparent;
+  width: 100%;
+  @include media(laptop) {
+    width: 0%;
+  }
+  h1 {
+    display: inline-block;
+    @include font-fam-size(2.2em, asli, bold, $text-black-m);
+    margin: auto 40px;
+  }
+  .navbar-toggler {
+    font-size: 1.9em;
+    outline: none;
+  }
 }

@@ -54,7 +54,7 @@
       top: 0;
     }
     @include media(laptop) {
-      margin: 5px auto;
+      margin: 20px auto;
     }
   }
   .works {
@@ -131,6 +131,8 @@
 
         @include media(laptop) {
           max-width: 100%;
+          width: 100px;
+          height: 100px;
         }
       }
     }
@@ -176,7 +178,13 @@
     width: 70%;
     background-color: #fff;
 
-    margin-bottom: auto;
+    margin-bottom: 7em;
+  }
+  @include media(4k) {
+    width: 70%;
+    background-color: #fff;
+    height: 40vh;
+    margin: auto;
   }
   @include media(landscape) {
     margin-bottom: 0;
@@ -196,7 +204,7 @@
       @include media(tablet) {
         margin: auto;
         font-weight: 600;
-        font-size: 1.1em;
+        font-size: 1.3em;
         width: 80%;
       }
       @include media(laptop) {
@@ -218,18 +226,20 @@
       }
 
       @include media(laptop) {
-        width: auto;
+        //width: auto;
       }
       .logo-skill {
         max-width: 100%;
         height: auto;
         width: 30px;
         margin: 6px;
-
         @include media(tablet) {
-          //width: 40px;
-          ////height: 60px;
-          //margin: 10px;
+          width: 40px;
+        }
+
+        @include media(laptop) {
+          width: 50px;
+          margin: 0.7em;
         }
       }
     }

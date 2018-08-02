@@ -46,8 +46,11 @@ body {
   @include media(tablet) {
     font-size: 3em;
   }
-  @include media(desktop) {
+  @include media(laptop) {
     font-size: 4em;
+  }
+  @include media(desktop) {
+    //font-size: 4em;
     margin: 20px;
   }
 }
