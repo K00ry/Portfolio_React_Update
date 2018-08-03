@@ -1,3 +1,15 @@
+///////// scroll trigger\\\\\\\\\\\
+
+.invisible {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.visible {
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+
 //bootsrtap corrections
 
 .panel {
@@ -168,7 +180,7 @@ body {
 #overlay-desktop {
   display: none;
   @include media(tablet) {
-    opacity: 0;
+    //opacity: 0;
     @include flex-display(flex, column, flex-start, 90%, center);
     .img-holder {
       @include flex-display(flex, column, flex-start, 100%, center);
@@ -180,7 +192,7 @@ body {
         }
 
         @include media(laptop) {
-          width: 94%;
+          width: 85%;
         }
       }
     }

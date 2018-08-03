@@ -29,6 +29,7 @@
     "react-scripts": "^1.1.4",
     "requirejs": "^2.3.2",
     "scrollmagic": "^2.0.5",
+    "scrolltrigger-classes": "^0.3.6",
     "webpack": "^3.11.0"
   }
 }

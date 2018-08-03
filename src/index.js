@@ -9,24 +9,8 @@ import main from './js/main';
 import mobile from './js/mobile';
 import desktop from './js/desktop';
 
-
-
-ReactDOM.render(
-    <App />,
-    document.getElementById('portfolio')
-);
-
-
-
-
-
-
-
-
-
+ReactDOM.render(<App />, document.getElementById('portfolio'));
 
 main();
 mobile();
 desktop();
-
-
