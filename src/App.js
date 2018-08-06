@@ -20,7 +20,7 @@ export default class App extends Component {
           'src/img/work/logos/js.png',
           'src/img/work/logos/sass.svg',
           'src/img/work/logos/react.png',
-          'src/img/work/logos/git.svg',
+          'src/img/work/logos/git.png',
         ],
         demo: 'https://k00ry.github.io/react-web-api/',
         github: 'https://github.com/K00ry/react-web-api',
