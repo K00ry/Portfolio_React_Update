@@ -6,7 +6,7 @@
     margin: 0px;
   }
   @include media(laptop) {
-    width: 20%;
+    width: 23%;
   }
   @include media(landscape) {
     justify-content: space-evenly;
@@ -37,6 +37,7 @@
       font-size: 1.2em;
     }
     @include media(laptop) {
+      margin: 0 8px;
       width: 40%;
       font-size: 1.1em;
     }
@@ -65,5 +66,8 @@
   border: none;
   .close {
     font-size: 34px;
+    @include media(landscape) {
+      font-size: 25px;
+    }
   }
 }

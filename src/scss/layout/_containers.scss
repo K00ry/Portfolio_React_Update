@@ -12,13 +12,19 @@
 
   h1 {
     text-align: center;
-    @include font-fam-size(5em, $main-font-5, bold, #333333);
+    @include font-fam-size(2.6em, $main-font-2, bold, #333333);
     @include media(landscape) {
+    }
+    @include media(tablet) {
+      font-size: 3.5em;
     }
   }
   p {
-    @include font-fam-size(2em, $main-font-5, bold, #333333);
+    @include font-fam-size(1.4em, $main-font-2, bold, #333333);
     border-radius: 50%;
+    @include media(tablet) {
+      font-size: 2em;
+    }
   }
 }
 
@@ -80,7 +86,7 @@
     flex-wrap: wrap;
   }
   @include media(tablet) {
-    @include flex-display(flex, row, space-around, 100%, center);
+    @include flex-display(flex, row, space-around, 98%, center);
     margin: 10px auto;
   }
   .last {
@@ -159,10 +165,15 @@
         font-size: 1em;
       }
       @include media(tablet) {
+        font-size: 1.3em;
         padding: 5px;
         width: 100%;
         text-align: center;
         margin: 15px 0 0 0;
+      }
+      @include media(desktop) {
+      font-size: 1.4em;
+
       }
     }
   }
@@ -198,8 +209,14 @@
     }
 
     .port-head-2 {
-      @include font-fam-size(3em, $main-font-5, bold, #333333);
+      @include font-fam-size(1.5em, $main-font-2, bold, #333333);
       margin: 0 auto;
+      @include media(tablet) {
+        font-size: 2em;
+      }
+      @include media(laptop) {
+        font-size: 3em;
+      }
     }
   }
 
@@ -211,14 +228,20 @@
       text-align: center;
       margin: 0.5em 0;
       @include media(tablet) {
+        @include font-fam-size(1.6em, $main-font-3, 400, #383838);
         margin: auto;
-        font-weight: 600;
-        font-size: 1.3em;
-        width: 80%;
+
+        width: 100%;
       }
       @include media(laptop) {
+        width: 80%;
         font-size: 1.4em;
         font-weight: 600;
+      }
+      @include media(desktop) {
+        @include font-fam-size(1.6em, $main-font-3, 400, #383838);
+        padding: 15px 10px;
+
       }
     }
   }
@@ -263,24 +286,39 @@
     //opacity: 0;
   }
   h3 {
+
     @include media(landscape) {
       font-size: 1.5em;
     }
-    @include font-fam-size(2.5em, $main-font-5, 200, #333333);
+    @include font-fam-size(1.7em, $main-font-2, 200, #333333);
     @include media(tablet) {
-      font-size: 3em;
+      font-size: 2.5em;
     }
   }
   .number-email {
-    @include flex-display(flex, row, space-around, 80%, center);
+    @include flex-display(flex, row, space-around, 100%, center);
+
     @include media(tablet) {
+      justify-content: space-between;
+
       margin: 10px auto;
+      font-size: 1.3em;
+    }
+    @include media(laptop) {
+      width: 80%;
+
+
+
+    }
+    @include media(desktop) {
       font-size: 1.8em;
+      width: 60%;
     }
     a {
-      @include font-fam-size(1.2em, $main-font-5, 200, #5b5b5b);
-      text-decoration: underline;
+      @include font-fam-size(.8em, $main-font, 200, #919191);
+      //text-decoration: underline;
       @include media(tablet) {
+        color: #616161;
         font-size: 1.4em;
       }
     }

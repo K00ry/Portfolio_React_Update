@@ -21,7 +21,7 @@
 
 #about {
   @include flex-display(flex, column, space-between, 100%, center);
-  height: 100vh;
+  height: 90vh;
   @include media(laptop) {
     //height: auto;
   }

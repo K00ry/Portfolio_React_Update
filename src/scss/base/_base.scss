@@ -49,26 +49,36 @@ body {
 
 .navbar-nav {
   margin: 0;
+
+
+
 }
+
 
 .nav-item a {
   outline: none;
   transition: all 0.5s;
-  @include font-fam-size(2em, $main-font-5, bold, #333333);
+  @include font-fam-size(1.3em, $main-font-2, bold, #333333);
+  opacity: 0.8;
   @include media(tablet) {
-    font-size: 3em;
+    font-size: 2em;
   }
   @include media(laptop) {
-    font-size: 4em;
+    font-size: 2.5em;
   }
   @include media(desktop) {
-    //font-size: 4em;
-    margin: 20px;
+
+    font-weight: bolder;
+    margin: 10px;
   }
 }
 
 .active-me a {
   color: #e7724b;
+  opacity: 1;
+
+
+
 }
 
 .active-intro {
@@ -110,7 +120,7 @@ body {
   h1 {
     width: 100%;
     background-color: #000000;
-    @include font-fam-size(4em, $main-font-5, bold, #ebebeb);
+    @include font-fam-size(2em, $main-font-3, bold, #ebebeb);
     padding: 10px 0;
     margin: 0;
     text-align: center;
@@ -163,16 +173,17 @@ body {
     }
   }
   p {
-    @include font-fam-size(1em, $main-font-2, bold, #000);
-    width: 80%;
+    @include font-fam-size(1.1em, $main-font-2, 600, #000);
+    width: 90%;
     text-align: center;
     //font-size: 0.7em;
     padding: 10px 0 10px 0;
     @include media(landscape) {
+      width: 100%;
       padding: 0.4em;
       margin: 0;
 
-      font-size: 0.7em;
+      font-size: 0.9em;
     }
   }
 }
@@ -207,12 +218,22 @@ body {
     }
   }
   .info-ov {
-    @include font-fam-size(1.2em, $main-font-2, 200, #383838);
+    @include font-fam-size(1.2em, $main-font-3, 200, #616161);
     margin: 10px 0;
     text-align: center;
+    @include media(tablet) {
+      font-size: 1.6em;
+      font-weight: 400;
+    }
 
     @include media(laptop) {
-      width: 80%;
+      width: 100%;
+      font-size: 1.4em;
+    }
+    @include media(desktop) {
+      font-size: 1.6em;
+      font-weight: 800;
+      width: 100%;
     }
   }
   .title-tech-ov {
@@ -221,13 +242,17 @@ body {
     .title-ov {
       @include font-fam-size(2em, $main-font-5, bold, #333333);
       @include media(tablet) {
-        @include font-fam-size(2.3em, $main-font-5, bold, #333333);
+        @include font-fam-size(1.4em, $main-font-2, bolder, #333333);
         text-align: left;
         margin: 0px;
-        line-height: 2;
+        line-height: 4;
       }
       @include media(laptop) {
-        @include font-fam-size(3em, $main-font-5, bold, #333333);
+        @include font-fam-size(1.7em, $main-font-2, bold, #333333);
+        line-height: 2;
+      }
+      @include media(desktop) {
+        @include font-fam-size(2.5em, $main-font-2, bolder, #333333);
       }
     }
     .tech-ov {
@@ -248,8 +273,8 @@ body {
       }
     }
   }
-  @include media(desktop) {
-    width: 70%;
+  @include media(laptop) {
+    width: 80%;
   }
 }
 
