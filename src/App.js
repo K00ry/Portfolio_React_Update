@@ -10,20 +10,21 @@ export default class App extends Component {
     super();
     this.state = {
       works: {
-        name: 'React Web API',
-        img: 'src/img/work/responsive/1.png',
-        info:
-          "In This Project, using Axios library, i used two Public API's(Lastfm/Flickr) to search for the artist and form a Gallery from the result, user then can choose an album and get info like bio and genres of chosen Artist. as bonus, User gets latest pictures related to the chosen Artist from Flickr.",
-        tech: [
-          'src/img/work/logos/html.png',
-          'src/img/work/logos/css.png',
-          'src/img/work/logos/js.png',
-          'src/img/work/logos/sass.svg',
-          'src/img/work/logos/react.png',
-          'src/img/work/logos/git.png',
-        ],
-        demo: 'https://k00ry.github.io/react-web-api/',
-        github: 'https://github.com/K00ry/react-web-api',
+          name: 'Pars Jadval',
+          img: 'src/img/work/responsive/6.png',
+          info:
+              'This React Built Project is the product showcase of a concrete precast company that i developed for mobile and tablet. Technologies used for this project include: React, React Router, React-Bootstrap, create-react-app, react-transition-group, i18next (for Localization).',
+          tech: [
+              'src/img/work/logos/react.png',
+              'src/img/work/logos/html.png',
+              'src/img/work/logos/es6.png',
+              'src/img/work/logos/css.png',
+              'src/img/work/logos/js.png',
+              'src/img/work/logos/sass.svg',
+              'src/img/work/logos/git.png',
+          ],
+          demo: 'http://www.parsjadval.kouroshmirzaei.com',
+          github: 'https://github.com/K00ry/pars-react',
       },
       responsiveMobile: false,
       show: false,
@@ -49,8 +50,8 @@ export default class App extends Component {
     return (
       <div id="projects">
         <h1 className="port-head">Work</h1>
-        <MediaQuery query="(max-device-width: 767px)">
           <Works data={worksDataMobile} handleClick={this.getArray} />
+        <MediaQuery query="(max-device-width: 767px)">
 
           <WorksMobile
             works={this.state.works}
@@ -58,9 +59,7 @@ export default class App extends Component {
             closeOverlay={this.overlayClose}
           />
         </MediaQuery>
-
         <MediaQuery query="(min-device-width: 768px)">
-          <Works data={worksData} handleClick={this.getArray} />
           <WorksDesktop works={this.state.works} />
         </MediaQuery>
       </div>

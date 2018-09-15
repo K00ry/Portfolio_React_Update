@@ -33,11 +33,11 @@
   @include media(tablet) {
     width: 100%;
     padding-top: 20px;
-    margin: auto;
+
   }
   @include media(laptop) {
     padding-top: 0;
-    width: 80%;
+    width: 90%;
   }
   @include media(desktop) {
     width: 80%;
@@ -87,7 +87,10 @@
   }
   @include media(tablet) {
     @include flex-display(flex, row, space-around, 98%, center);
-    margin: 10px auto;
+    margin: 1em auto;
+  }
+  @include media(laptop) {
+
   }
   .last {
     margin-left: 200px;
@@ -96,7 +99,7 @@
     z-index: 2;
     @include flex-display(flex, row-reverse, center, 100%, center);
 
-    margin: 15px auto;
+    margin: 1em auto;
 
     @include media(landscape) {
       @include flex-display(flex, column, space-around, 20%, center);
@@ -127,8 +130,7 @@
         &:hover {
           //box-shadow: 0 0 0 10px hsl(15, 76%, 70%), 0 0 0 20px hsl(30, 76%, 70%);
         }
-        @include media(laptop) {
-        }
+
       }
       img {
         max-width: 100%;
@@ -136,7 +138,7 @@
         @include media(tablet) {
           //border-radius: 50%;
           max-width: 100%;
-          width: 86px;
+          width: 100px;
           height: auto;
         }
 
@@ -168,11 +170,11 @@
         font-size: 1em;
       }
       @include media(tablet) {
-        font-size: 1.3em;
+        font-size: 1em;
         padding: 5px;
         width: 100%;
         text-align: center;
-        margin: 15px 0 0 0;
+        margin: .6em 0 0 0;
       }
       @include media(desktop) {
       font-size: 1.4em;
@@ -213,7 +215,7 @@
 
     .port-head-2 {
       @include font-fam-size(1.5em, $main-font-2, bold, #333333);
-      margin: 0 auto;
+      margin: .5em auto;
       @include media(tablet) {
         font-size: 2em;
       }
@@ -226,12 +228,12 @@
   .about-me-info {
     p {
       padding: 5px 10px;
-      @include font-fam-size(1.2em, $main-font-2, 400, #383838);
+      @include font-fam-size(1.2em, $main-font-2, 400, $about-text);
 
       text-align: center;
       margin: 0.5em 0;
       @include media(tablet) {
-        @include font-fam-size(1.6em, $main-font-3, 400, #383838);
+        @include font-fam-size(1.6em, $main-font-3, 400, $about-text);
         margin: auto;
 
         width: 100%;
@@ -242,7 +244,7 @@
         font-weight: 600;
       }
       @include media(desktop) {
-        @include font-fam-size(1.6em, $main-font-3, 400, #383838);
+        @include font-fam-size(1.6em, $main-font-3, 400, $about-text);
         padding: 15px 10px;
 
       }
@@ -250,7 +252,7 @@
   }
 
   .skills-main {
-    @include flex-display(flex, column, space-around, 90%, center);
+    @include flex-display(flex, column, space-around, 100%, center);
     .skills-icons {
       //opacity: 0;
       transition: all 0.5s;

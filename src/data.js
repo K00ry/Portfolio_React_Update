@@ -54,7 +54,7 @@ export const data = [
         name: 'Pars Jadval',
         img: 'src/img/work/responsive/6.png',
         info:
-            'This project was about building a beautiful web application dashboard complete with JavaScript-driven charts and graphs base on a supplied graphic Mock-up. This was a front end project only, that required to create the responsive layout in HTML and CSS with added JavaScript functionality. Flexbox and Sass proved to be invaluable tools.',
+            'This React Built Project is the product showcase of a concrete precast company that i developed for mobile and tablet. Technologies used for this project include: React, React Router, React-Bootstrap, create-react-app, react-transition-group, i18next (for Localization).',
         tech: [
             'src/img/work/logos/react.png',
             'src/img/work/logos/html.png',
@@ -113,7 +113,7 @@ export const skills = [
   'src/img/work/logos/bootstrap.png',
   'src/img/work/logos/big.png',
   'src/img/work/logos/green.png',
-  'src/img/work/logos/ai.png',
+  'src/img/work/logos/adobe.png',
 ];
 
 export const worksData = [

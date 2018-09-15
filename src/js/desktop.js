@@ -50,7 +50,7 @@ export default function desktop() {
 
     /////////////////////// Scroll to click handlers \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     const target_home = $('#home').offset().top,
-      target_portfolio = $('#projects').offset().top,
+      target_portfolio = $('#portfolio').offset().top,
       target_about = $('.number-email').offset().top;
 
     $('#home-link').click(function() {

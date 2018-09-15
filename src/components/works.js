@@ -10,7 +10,7 @@ export default class Works extends Component {
   render() {
     let works = this.props.data.map((work, index) => {
       let jaber = ' ';
-      if (index === 2) {
+      if (index === 3) {
         jaber += 'active';
       }
       return (
