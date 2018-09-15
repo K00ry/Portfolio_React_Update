@@ -15,6 +15,7 @@ export const data = [
     demo: 'https://k00ry.github.io/css_sass/',
     github: 'https://github.com/K00ry/css_sass',
   },
+
   {
     name: 'WEB APP',
     img: 'src/img/work/responsive/2.png',
@@ -49,6 +50,23 @@ export const data = [
     demo: 'https://k00ry.github.io/react-web-api/',
     github: 'https://github.com/K00ry/react-web-api',
   },
+    {
+        name: 'Pars Jadval',
+        img: 'src/img/work/responsive/6.png',
+        info:
+            'This project was about building a beautiful web application dashboard complete with JavaScript-driven charts and graphs base on a supplied graphic Mock-up. This was a front end project only, that required to create the responsive layout in HTML and CSS with added JavaScript functionality. Flexbox and Sass proved to be invaluable tools.',
+        tech: [
+            'src/img/work/logos/react.png',
+            'src/img/work/logos/html.png',
+            'src/img/work/logos/es6.png',
+            'src/img/work/logos/css.png',
+            'src/img/work/logos/js.png',
+            'src/img/work/logos/sass.svg',
+            'src/img/work/logos/git.png',
+        ],
+        demo: 'http://www.parsjadval.kouroshmirzaei.com',
+        github: 'https://github.com/K00ry/pars-react',
+    },
   {
     name: 'Interactive Video-player',
     img: 'src/img/work/responsive/4.png',
@@ -81,39 +99,38 @@ export const data = [
 
 export const skills = [
   'src/img/work/logos/react.png',
-    'src/img/work/logos/node.png',
-  'src/img/work/logos/jquery.png',
-
-  'src/img/work/logos/php.png',
-
+  'src/img/work/logos/node.png',
+    'src/img/work/logos/es6.png',
   'src/img/work/logos/html.png',
   'src/img/work/logos/css.png',
-  'src/img/work/logos/js.png',
-    'src/img/work/logos/sass.svg',
-
+    'src/img/work/logos/js.png',
+    'src/img/work/logos/jquery.png',
+    'src/img/work/logos/php.png',
+  'src/img/work/logos/sass.svg',
   'src/img/work/logos/webpack.png',
   'src/img/work/logos/gulp1.png',
   'src/img/work/logos/git.png',
-
   'src/img/work/logos/bootstrap.png',
-
   'src/img/work/logos/big.png',
   'src/img/work/logos/green.png',
-
   'src/img/work/logos/ai.png',
 ];
 
 export const worksData = [
-  { id: 1, name: 'Responsive Layout', src: 'src/img/work/tablet/3.png' },
-  { id: 2, name: 'WEB APP', src: 'src/img/work/tablet/2.png' },
-  { id: 3, name: 'React Web API', src: 'src/img/work/tablet/1.png' },
-  { id: 4, name: 'Video Player', src: 'src/img/work/tablet/4.png' },
-  { id: 5, name: 'Registration Form', src: 'src/img/work/tablet/5.png' },
+  { id: 1, name: 'Responsive Layout', src: 'src/img/work/responsive/3.png' },
+  { id: 2, name: 'WEB APP', src: 'src/img/work/responsive/2.png' },
+  { id: 3, name: 'React Web API', src: 'src/img/work/responsive/1.png' },
+  { id: 4, name: 'Pars Jadval', src: 'src/img/work/responsive/6.png' },
+  { id: 5, name: 'Video Player', src: 'src/img/work/responsive/4.png' },
+  { id: 6, name: 'Registration Form', src: 'src/img/work/responsive/5.png' },
+
 ];
 export const worksDataMobile = [
   { id: 1, name: 'Responsive Layout', src: 'src/img/work/responsive/3.png' },
   { id: 2, name: 'WEB APP', src: 'src/img/work/responsive/2.png' },
   { id: 3, name: 'React Web API', src: 'src/img/work/responsive/1.png' },
-  { id: 4, name: 'Video Player', src: 'src/img/work/responsive/4.png' },
-  { id: 5, name: 'Registration Form', src: 'src/img/work/responsive/5.png' },
+  { id: 4, name: 'Pars Jadval', src: 'src/img/work/responsive/6.png' },
+  { id: 5, name: 'Video Player', src: 'src/img/work/responsive/4.png' },
+  { id: 6, name: 'Registration Form', src: 'src/img/work/responsive/5.png' },
+
 ];

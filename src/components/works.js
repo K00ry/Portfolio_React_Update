@@ -33,6 +33,6 @@ export default class Works extends Component {
   }
 }
 Works.propTypes = {
-  data: PropTypes.array.isRequired,
+  // data: PropTypes.array.isRequired,
   handleClick: PropTypes.func.isRequired,
 };
