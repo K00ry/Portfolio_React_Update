@@ -1,7 +1,5 @@
 import $ from 'jquery';
-// import { TweenMax, TimelineMax } from 'gsap';
-// import ScrollMagic from 'scrollmagic';
-// import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators'
+
 
 ///////////////////--------------- javascript code for desktop ----------- \\\\\\\\\\\\\\\\\\\\\
 
@@ -35,6 +33,29 @@ export default function desktop() {
     $('#about-link').click(function() {
       $('html, body').animate({ scrollTop: target_about }, 1500);
     });
+
+      let scrollpos = window.scrollY;
+      const header = document.querySelector("nav");
+      const header_height = document.getElementById("portfolio").offsetTop;
+      const closing_height = document.getElementById("about").offsetTop;
+
+
+      const add_class_on_scroll = () => header.classList.add("fade-in");
+      const remove_class_on_scroll = () => header.classList.remove("fade-in");
+
+
+      window.addEventListener('scroll', function() {
+          scrollpos = window.scrollY;
+
+          if (scrollpos >= header_height) { add_class_on_scroll() }
+          else { remove_class_on_scroll() }
+          if (scrollpos >= 1400) { remove_class_on_scroll() }
+          // if (scrollpos >= closing_height) { add_class_on_scroll() }
+          // else { remove_class_on_scroll() }
+
+          // console.log(closing_height);
+      })
+
 
     ///////////////////--------------- javascript code for tablet ----------- \\\\\\\\\\\\\\\\\\\\\
   } else if (

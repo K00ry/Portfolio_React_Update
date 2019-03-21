@@ -1,7 +1,5 @@
 import $ from 'jquery';
-import { TweenMax } from 'gsap';
-import ScrollMagic from 'scrollmagic';
-// import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators'
+
 
 ///////////////////--------------- javascript code for mobile ----------- \\\\\\\\\\\\\\\\\\\\\
 
@@ -39,20 +37,7 @@ export default function mobile() {
       });
     }
 
-    ////////////////////////////////////////////////main head disappear\\\\\\\\\\\\\\\\\\
 
-    /////////////////////// nav back groung white when nedded \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-    var controller = new ScrollMagic.Controller();
-    const backWhite = TweenMax.to($('.about-main,.navbar'), 4, {
-      css: { background: '#fff' },
-    });
-    const jaber = new ScrollMagic.Scene({
-      triggerElement: '#about',
-      triggerHook: 0.2,
-      duration: '100',
-    })
-      .setTween(backWhite)
-      // .addIndicators()
-      .addTo(controller);
+
   } //////////////////////////////////////////end break points!!
 }

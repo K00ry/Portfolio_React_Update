@@ -1,5 +1,5 @@
 import $ from 'jquery';
-// import { TweenMax, TimelineMax } from 'gsap';
+
 import ScrollMagic from 'scrollmagic';
 import ScrollTrigger from 'scrolltrigger-classes';
 
@@ -114,3 +114,24 @@ export default function main() {
   const copyYear = ` &copy; Kourosh Mirzaei ${year}`;
   copyRight.html(copyYear);
 }
+
+/////////////////////////
+let scrollpos = window.scrollY;
+const header = document.querySelector("nav");
+const header_height = document.getElementById("portfolio").offsetTop;
+const closing_height = document.getElementById("about").offsetTop;
+
+
+const add_class_on_scroll = () => header.classList.add("fade-in");
+const remove_class_on_scroll = () => header.classList.remove("fade-in");
+
+
+window.addEventListener('scroll', function() {
+    scrollpos = window.scrollY;
+
+    if (scrollpos >= header_height) { add_class_on_scroll() }
+    else { remove_class_on_scroll() }
+    if (scrollpos >= 1400) { remove_class_on_scroll() }
+
+
+});

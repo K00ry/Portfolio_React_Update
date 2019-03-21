@@ -9,7 +9,7 @@
 
 #portfolio {
   @include flex-display(flex, column, space-between, 100%, center);
-  //height: 100vh;
+
 
 
   @include media(landscape) {
@@ -17,8 +17,7 @@
   }
   @include media(tablet) {
     height: 100vh;
-    //height: auto;
-    //margin-bottom: 4em;
+
   }
   @include media(laptop) {
     margin-bottom: 10em;
@@ -42,11 +41,7 @@
     height: auto;
     margin-bottom: 10vh;
   }
-  @include media(desktop) {
-    margin-bottom: 20vh;
 
-
-  }
 
 
 
